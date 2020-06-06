@@ -1,0 +1,58 @@
+<hr>
+
+<%
+const groups = [
+  {
+    key: "job-quality",
+    items: [
+      "regular-job",
+      "interesting-job",
+      "featured-job"
+    ],
+  },
+  {
+    key: "budget-hourly",
+    items: [
+      "unspecified",
+      "$5-$10",
+      "$10-$20",
+      "$20-$30",
+      "$30-$40",
+      "$40-$50",
+      "$50-$65",
+      "$65-$80",
+      "$80+"
+    ]
+  }
+];
+%>
+
+<div class="row">
+  <div class="col-md-3 p-0-right">
+    <label class="control-label">Upwork+</label>
+  </div>
+
+  <% groups.forEach(function(group) { %>
+  <div class="col-md-3 p-0-right">
+    <div class="form-group m-md-bottom">
+      <label class="control-label"><%= translate(group.key) %></label>
+
+      <% group.items.forEach(function(item) { %>
+        <div class="checkbox p-0-bottom">
+          <label class="p-0-top-bottom">
+            <input
+              type="checkbox"
+              key="<%= item %>"
+              <% if (filters[item]) { %>checked<% } %>
+            >
+            <span class="checkbox-replacement-helper">
+              <span class="glyphicon air-icon-check"></span>
+            </span>
+            <span><%= translate(item) %></span>
+          </label>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+  <% }); %>
+</div>

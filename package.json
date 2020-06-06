@@ -1,0 +1,17 @@
+{
+  "name": "upwork-plus-extension",
+  "version": "1.0.0",
+  "description": "A Chrome extension that modifies Upwork filters to allow more granular searches",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Mariusz Marciniak",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "ejs-webpack-loader": "^2.2.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
